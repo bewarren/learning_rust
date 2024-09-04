@@ -1,9 +1,9 @@
 fn main() {
-    println!("Hello, world!");
+    let x = plus_one(5);
 
-    another_function();
+    println!("The value of x is: {x}");
 }
 
-fn another_function() {
-    println!("Another function.");
+fn plus_one(x: i32) -> i32 {
+    return x + 1;
 }
