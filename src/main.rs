@@ -2,19 +2,18 @@
 
 
 fn main() {
-    let hello = "Здравствуйте";
+    use std::collections::HashMap;
 
-    let s = &hello[0..4];
+    let mut scores = HashMap::new();
 
-    println!("{s}");
+    scores.insert(String::from("Blue"), 10);
+    scores.insert(String::from("Yellow"), 50);
 
-    for c in "Зд".chars() {
-        println!("{c}");
-    }
+    let team_name = String::from("Blue");
+    let score = scores.get(&team_name).copied().unwrap_or(0);
 
-    for b in "Зд".bytes() {
-        println!("{b}");
-    }
+    println!("{score}");
+
 
 
 }
